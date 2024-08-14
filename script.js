@@ -35,7 +35,7 @@ new Promise (function(resolve , reject){
     const image = data.avatar_url;
 
     pic.src = image;
-    comsole.log(image)
+    
 
 })
 .catch(function(error){
