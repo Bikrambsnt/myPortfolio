@@ -1,4 +1,4 @@
-const phrases = [ "javaScript" ,"Web Development",  "HTML","Css", "Git" , "React"];
+const phrases = [ "javaScript" ,"Mongo DB","Express", "React" ,"NodeJs","Css", "Git & GitHub","Web Development","HTML"];
 let index = 0;
 let charIndex = 0;
 const scrollElement = document.getElementById('scroll');
