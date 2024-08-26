@@ -15,4 +15,36 @@ anime({
     loop: true
   });
 
+
+  // Back side of Skill Card
+  anime({
+    targets: '.el',
+    translateY: 1000,
+    rotate:'2turn',
+    easing:'EaseInOut',
+    direction: 'alternate',
+    loop: true,
+    duration: 8000,
+    easing: function(el, i, total) {
+      return function(t) {
+        return Math.pow(Math.sin(t * (i + 6)), total);
+      }
+    }
+  });
+
+//  Rotate Profile Pic. 
+  setInterval(() =>{
+    anime({
+        targets:'.image-container',
+        rotateY:'+=360',
+        easing:'easeInOutQuad',
+        duration:2000
+    
+      }
+      )
+
+
+  },5000)
+ 
+
   

@@ -1,31 +1,41 @@
-.animation {
+.animationcontainer {
     display: flex;
-    position: relative;
-    justify-content: left;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     flex-direction: row;
+    gap: 200px;
+    /* overflow:hidden ; */
+    position: absolute;
+    z-index: 0;
+}
+
+.box, .box1, .box2, .box3, .box4{
+    width: 50px;
+    height: 50px;
+    /* max-width: 1000px; */
+    /*  */
    
 }
 
-.el {
-    width: 50px;
-    height: 50px;
-    background-color: #fcc419;
-    margin: 10px;
+.box,.box5{
+    background-color: rgb(255, 255, 0);
+    border-radius: 20px;
+}
+.box1{
+    background-color: rgba(255, 55, 0, 0.742);
+    border-radius: 2px;
+}
+.box2,.box6{
+    background-color: aqua;
+    border-radius: 50px;
+}
+.box3{
+    background-color: rgba(0, 153, 0, 0.611);
+    border-radius: 2px;
+}
+.box4,.box7{
+    background-color: rgb(255, 3, 3);
+    border-radius: 20px;
 }
 
-.circle {
-    border-radius: 50%;
-}
-
-.square {
-    border-radius: 10%;
-}
-
-.triangle {
-    width: 0;
-    height: 0;
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-bottom: 50px solid #fcc419;
-    background-color: transparent;
-}
