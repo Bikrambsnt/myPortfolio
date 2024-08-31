@@ -430,42 +430,6 @@ top:220px;
 /* Cv button Ends */
 
 
-/* Icons of social  */
-  
-.social {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    position: absolute;
-    left: 98px;
-    bottom: 35px;
-    gap: 5px;
-   
-   
-}
-
-
-.insta-icon{  
-    transition: transform 0.3s ease-in-out;
-}
-.insta-icon:hover{
-    transform: scale(1.1) rotateY(180deg);
-}
-
-.git-icon{
-    transition: transform 0.3s ease-in-out;
-}
-.git-icon:hover{
-    transform: scale(1.1)rotateY(180deg);
-}
-
-.linkedin-icon{
-transition: transform 0.3s ease-in-out;
-}
-.linkedin-icon:hover{
-    transform: scale(1.1) rotateY(180deg);
-}
-
 /* Section End */
 
 
@@ -541,6 +505,7 @@ transition: transform 0.3s ease-in-out;
 .skill-card,.project-container{
     position: relative;
     display: flex;
+    border: 2px solid #10b8d6;
     padding: 20px;
     flex-shrink: 0;
     margin: 30px;
@@ -885,7 +850,7 @@ width: 100%;
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(3,1fr);
-  
+
 
 }
 .maincard{
@@ -1047,7 +1012,169 @@ width: 100%;
   /* Button Indside card Ends */
  
   
+  /* footer Start */
+   footer{
+    background-color: #0e0e0e;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .contact-card{
+    width: 70%;
+    height: 95%;
+    background-color: #303030;
+    border-radius: 20px;
+   
+   }
+
+form{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 80%;
+}
+.contact-card p{
+    text-align: center;
+    margin: 2px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-size: 3.5rem; /* Increase font size */
+    font-weight:400; /* Make the text bold */
+    font-family: 'jersey 10' ,sans-serif;
+}
+/* Input Field */
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+    left: 110px;
+    
+  }
   
+  .form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #ffffff;
+  }
+  
+  .form-control input:focus,
+  .form-control input:valid {
+    outline: 0;
+    border-bottom-color: rgb(255, 238, 0);
+  }
+  
+  .form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #fff;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .form-control input:focus+label span,
+  .form-control input:valid+label span {
+    color: rgba(0, 255, 247, 0.88);
+    transform: translateY(-30px);
+  }
+  .social {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: flex-start; /* Align items to the left */
+    position: relative;
+    right: 250px;
+    cursor: pointer;
+    top: 20px;
+    gap: 70px; /* Adjust the spacing between the icons */
+  }
+  
+  .facebook, .insta, .linkedin, .github {
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .social span {
+    color: #ffffff;
+    font-size: 16px;
+    margin-left: 10px; /* Adds space between the icon and the text */
+  }
+/* Input field End */
+
+/* Send Button */
+/* From Uiverse.io by Creatlydev */ 
+.button {
+    line-height: 1;
+    text-decoration: none;
+    position: absolute;
+    left: 250px;
+    margin-top: 185px;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    background-color: rgba(255, 234, 0, 0.83);
+    color: #fff;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: .75rem 1.5rem;
+    padding-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color .3s;
+  }
+  
+  .button__icon-wrapper {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    color: var(--clr);
+    background-color: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+  
+ .button:hover {
+    background-color: #000;
+  }
+  
+.button:hover .button__icon-wrapper {
+    color: #ff5900;
+  }
+  
+  .button__icon-svg--copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+  
+  .button:hover .button__icon-svg:first-child {
+    transition: transform .3s ease-in-out;
+    transform: translate(150%, -150%);
+  }
+  
+  .button:hover .button__icon-svg--copy {
+    transition: transform .3s ease-in-out .1s;
+    transform: translate(0);
+  }
+/* Send Button Ends */
+
+
+  /* footer ends */
 
 
 /* Project Section Ends */
@@ -1333,9 +1460,6 @@ width: 100%;
     font-size: 28px;
 }
 
-.social{
-    left: 20px;
-}
 /* About */
 
 .about-section{
@@ -1399,9 +1523,6 @@ width: 100%;
         font-size: 22px;
     }
 
-    .social{
-        left: 20px;
-    }
   /* About */
 
 .about-section{
@@ -1445,9 +1566,7 @@ width: 100%;
     border: none;
 }
 
-.social{
-    display: none;
-}
+
 
 .name{
     font-size: 26px;
@@ -1538,9 +1657,7 @@ width: 100%;
         font-size: 12px;
     }
     
-    .social {
-        display: none;
-    }
+   
 
     .nav-items ul{
         width: 100px;
@@ -1661,9 +1778,7 @@ width: 100%;
     }
 
 
-    .social{
-        display: none;
-    }
+   
     .image-container{
 
         width:80px;
