@@ -63,3 +63,6 @@ anime({
     loop: true,
     duration:2500
   });
+
+
+  
