@@ -24,6 +24,22 @@ body {
   box-sizing: border-box;
 }
 
+.to-top{
+display: flex;
+align-items: center;
+justify-content: center;
+position: fixed;
+margin-right: auto;
+right: 30px;
+bottom: 20px;
+z-index: 999;
+/* position: sticky; */
+}
+
+
+
+
+
 .container {
   display: flex;
   justify-content: center;
@@ -1279,6 +1295,11 @@ footer {
   
 }
 @media (max-width: 800px) {
+    
+    .to-top{
+        right: 5px;
+        bottom: 35px;
+    }
   .contain {
     width: 95%;
   }
@@ -1764,10 +1785,18 @@ button.explore{
     height: 70px;
   }
 
-  /* .row-line, .row-line-a, .row-line-b, .row-line-c{
-    top:38%;
-    position: absolute;
-  } */
+ .row-line{
+    top: 38%;
+ }
+ .row-line-a{
+    top: 56%;
+ }
+ .row-line-b{
+    top: 73.5%;
+ }
+ .row-line-c{
+    top:92%;
+ }
   
   .icon-container{
     left: 20px;
