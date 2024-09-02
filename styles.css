@@ -806,16 +806,16 @@ line {
   padding-top: 70px;
   width: 100%;
   display: grid;
+  justify-items: center;
   gap: 30px;
   grid-template-columns: repeat(3, 1fr);
 }
 .maincard {
   width: 190px;
-  height: 254px;
-  left: 62px;
-  /* background-color: #00ffcc58; */
+  height: 254px; 
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -827,6 +827,7 @@ line {
   text-align: center;
   color: #f6ff00;
   top: 30px;
+  max-width: 152px;
   /* max-width: 200px; */
 }
 
@@ -840,6 +841,7 @@ line {
   padding: 12px;
   border-radius: 16px;
   cursor: pointer;
+
   /* color: white; */
 
   /* z-index: 1; */
@@ -966,27 +968,23 @@ button:hover .button-text {
 /* footer Start */
 footer {
   background-color: #0e0e0e;
-  height: 80vh;
+  height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .contact-card {
+  position: absolute;
   width: 70%;
-  height: 95%;
+  height: 80%;
   background-color: #303030;
   border-radius: 20px;
   border: 2px solid #10b8d6;
   overflow: hidden;
 }
 
-form {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  height: 80%;
-}
+
 
 .contact-card p {
   text-align: center;
@@ -1047,9 +1045,9 @@ form {
   flex-direction: column; /* Arrange items vertically */
   align-items: flex-start; /* Align items to the left */
   position: relative;
-  right: 250px;
+ left: 280px;
   cursor: pointer;
-  top: 20px;
+  top: -5px;
   gap: 70px; /* Adjust the spacing between the icons */
 }
 
@@ -1070,12 +1068,26 @@ form {
 
 /* Send Button */
 
+.send-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.send-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .button {
   line-height: 1;
   text-decoration: none;
   position: absolute;
-  left: 250px;
-  margin-top: 185px;
+  left: 18rem;
+  margin-top: 410px;
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -1164,6 +1176,7 @@ form {
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version */
+ 
 }
 
 /* Remove active state */
@@ -1179,10 +1192,14 @@ form {
     gap: 175px;
   }
 
-  .project-items .maincard {
-    position: relative;
-    left: 12px;
+  .social{
+    left: 230px;
   }
+ .button{
+    left:17rem;
+    margin-top: 450px;
+ }
+
 }
 
 @media (max-width: 1000px) {
@@ -1190,6 +1207,9 @@ form {
     font-size: 18px;
   }
 
+  .image-container{
+    right: 28px;
+  }
   .skills-section .animationcontainer {
     gap: 140px;
   }
@@ -1200,6 +1220,24 @@ form {
   .icon-container-b {
     right: 150px;
   }
+ .project-items .maincard{
+    width: 180px;
+ }
+ button.explore{
+        width: 11rem;
+      }
+
+      .form-control input{
+        width: 80%;
+      }
+
+      .social{
+        left: 200px;
+      }
+      .button{
+        left:16rem;
+        margin-top: 450px;
+     }
 }
 
 @media (max-width: 850px) {
@@ -1207,12 +1245,38 @@ form {
     gap: 128px;
   }
 
+  .image-container{
+    right: 12px;
+    width: 180px;
+    height: 180px;
+    top: 185px;
+  }
   .icon-container {
     left: 100px;
   }
   .icon-container-b {
     right: 100px;
   }
+ .project-items .maincard {
+    width: 170px;
+    height: 240px;
+
+  }
+  
+  .project-items{
+    gap: 18px 16px;
+  }
+  button.explore{
+    width: 10rem;
+  }
+  button.explore .circle{
+    left: -4px;
+  }
+
+  .social{
+    left: 180px;
+  }
+  
 }
 @media (max-width: 800px) {
   .contain {
@@ -1238,10 +1302,10 @@ form {
     display: none; /* Hide the menu by default */
     flex-direction: column;
     position: fixed;
-    top: 175px;
-    right: 90px;
-    height: auto;
-    width: 210px;
+    top: 78px;
+    right: 28px;
+    height: 50vh;
+    width: 200px;
     background-color: #fff1e6;
     padding: 50px 20px;
     color: #161616;
@@ -1249,13 +1313,17 @@ form {
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 999; /* Ensure the menu is above other elements */
   }
+  .nav-items ul li a{
+    color: #000000;
+  }
+
 
   .nav-items ul.show-menu {
     display: flex;
   }
 
   .nav-items ul li {
-    margin: 15px 0; /* Adjust the margin between the menu items */
+    margin: 25px 0; /* Adjust the margin between the menu items */
   }
 
   .image-container {
@@ -1313,6 +1381,23 @@ form {
   .skills-section .animationcontainer {
     gap: 114px;
   }
+  .project-items .maincard{
+    width: 160px;
+    height: 240px;
+
+  }
+.project-items{
+    gap: 18px 16px;
+  }
+  button.explore{
+    width: 10rem;
+  }
+
+  button.explore .circle{
+    left: -4px;
+  }
+
+
 }
 
 @media (max-width: 750px) and (min-width: 650px) {
@@ -1338,10 +1423,6 @@ form {
     font-size: 22px;
   }
 
-  .social {
-    left: 60px;
-  }
-
   .btn {
     left: 65px;
   }
@@ -1355,17 +1436,48 @@ form {
 .icon-container-b{
     right: 65px;
 }
+.project-items .maincard{
+    width: 142px;
+    height: 230px;
+}
+.maincard p{
+    font-size: 30px;
+    text-align: center;
+}
+.project-items{
+    gap: 18px 10px;
+  }
+
+    .skills-section .project-container{
+        width: 82%;
+    }
+button.explore{
+    width: 9rem;
+  }
+  .form-control{
+    left: 75px;
+  }
+  .form-control input{
+    width: 70%;
+  }
+  .social{
+    left:145px;
+  }
+  .button{
+    left: 11rem;
+        margin-top: 450px;
+  }
 }
 
 @media (max-width: 650px) and (min-width: 500px) {
-  .nav-items ul {
+  /* .nav-items ul {
     width: 200px;
     height: 60vh;
     font-size: 18px;
     right: 18px;
     top: 85px;
     padding: 20px 25px;
-  }
+  } */
 
   .nav-items ul li {
     margin: 25px 0; /* Adjust the margin between the menu items */
@@ -1421,20 +1533,58 @@ form {
 .icon-container-b{
     right: 40px;
 }
+.project-items .maincard{
+  
+    width: 165px;
+    height: 230px;
+}
+.maincard p{
+    font-size: 32px;
+    text-align: center;
+}
+
+.project-items{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 18px 16px;
+}
+.skills-section .project-container{
+    width: 80%;
+}
+button.explore{
+    width: 9rem;
+  }
+  .contact-card{
+    width: 80%;
+  }
+  .form-control{
+    left: 55px;
+    width: 235px;
+  }
+  .form-control input{
+    width: 70%;
+  }
+  .social{
+    left:120px;
+  }
+  .button{
+    left: 7rem;
+        margin-top: 450px;
+  }
 }
 
 @media (max-width: 500px) and (min-width: 400px) {
   .nav-items ul {
     width: 200px;
-    height: 60vh;
+    height: 50vh;
     font-size: 18px;
     right: 18px;
-    top: 85px;
+    top: 78px;
     padding: 20px 25px;
   }
 
   .nav-items ul li {
-    margin: 18px 0; /* Adjust the margin between the menu items */
+    margin: 25px 0; /* Adjust the margin between the menu items */
   }
 
   .contain {
@@ -1484,12 +1634,83 @@ form {
 .icon-container-b{
     right: 20px;
 }
+.project-items .maincard{
+  
+    width: 130px;
+    height: 190px;
+}
+.maincard p{
+    font-size: 24px;
+    text-align: center;
+}
+
+.project-items{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 18px 10px;
+}
+
+button.explore{
+    width: 8rem;
+  }
+  button.explore .button-text{
+    font-size: 14px;
+    left: 16px;
+    line-height: 2;
+  }
+
+  .project-items button{
+    top: 60px;
+  }
+ footer{
+    height: 90vh;
+ }
+
+  .contact-card{
+    width: 80%;
+    height: 85%;
+  }
+  .form-control{
+    left: 55px;
+    /* width: 235px; */
+  }
+  .form-control input{
+    width: 70%;
+  }
+  .social{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+ justify-items: center;
+ left: 0px;
+ top: 240px;
+ gap: 10px;
+  }
+  .social span{
+    font-size: 12px;
+  }
+  .button{
+    left: 90px;
+    margin-top: 330px;
+  }
 }
 
 @media (max-width: 400px) and (min-width: 300px) {
   .intro {
     top: 280px;
     left: 22px;
+  }
+
+  .nav-items ul {
+    width: 170px;
+    height: 50vh;
+    font-size: 18px;
+    right: 18px;
+    top: 78px;
+    padding: 20px 25px;
+  }
+
+  .nav-items ul li {
+    margin: 25px 0; /* Adjust the margin between the menu items */
   }
 
   .image-container {
@@ -1554,6 +1775,71 @@ form {
 .icon-container-b{
     right: 20px;
 }
+.project-items .maincard{
+  
+    width: 190px;
+  height: 254px;
+   
+}
+.project-items{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+
+}
+
+
+.maincard p{
+    font-size: 32px;
+    text-align: center;
+}
+
+
+/* .skills-section .project-container{
+    width: 80%;
+} */
+/* button.explore{
+    width: 8rem;
+  }
+  button.explore .button-text{
+    font-size: 14px;
+    left: 16px;
+    line-height: 2;
+  } */
+  /* .project-items button{
+    top: 60px;
+  } */
+  footer{
+    height: 90vh;
+ }
+
+  .contact-card{
+    width: 80%;
+    height: 85%;
+  }
+  .form-control{
+    left: 32px;
+    width: 235px;
+  }
+  .form-control input{
+    width: 70%;
+  }
+  .social{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+ justify-content: center;
+ left: 0;
+ top: 240px;
+ gap: 10px;
+  }
+  .social span{
+    font-size: 12px;
+  }
+  .button{
+    left: 60px;
+    margin-top: 335px;
+  }
 }
 
 @media (max-width: 299px) and (min-width: 200px) {
@@ -1596,16 +1882,16 @@ form {
   }
 
   .nav-items ul {
-    width: 100px;
-    height: 60vh;
+    width: 115px;
+    height: 50vh;
     font-size: 18px;
     right: 10px;
-    top: 70px;
+    top: 78px;
     padding: 20px 25px;
   }
 
   .nav-items ul li {
-    margin: 18px 0; /* Adjust the margin between the menu items */
+    margin: 25px 0; /* Adjust the margin between the menu items */
   }
 
   /* About */
@@ -1665,10 +1951,76 @@ form {
     right:15px ;
     bottom: 5%;
   }
-
+.box4 ,.box47{
+    display: none;
+}
   .row-line, .row-line-a, .row-line-b, .row-line-c{
     display: none;
   }
+  .project-container{
+    width: 72%;
+  }
+
+  .projectSection p{
+    font-size: 2.8rem;
+  }
+  .project-items .maincard{
+  
+    width: 150px;
+  height: 232px;
+   
+}
+.project-items{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+    gap: 18px 5px;
+}
+
+
+.maincard p{
+    font-size: 30px;
+    text-align: center;
+}
+
+
+footer{
+    height: 90vh;
+ }
+
+  .contact-card{
+    width: 90%;
+    height: 85%;
+  }
+  .contact-card p{
+    font-size: 3rem;
+  }
+  .form-control{
+    left: 16px;
+    width: 200px;
+  }
+  .form-control input{
+    width: 70%;
+  }
+  .social{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+ justify-content: center;
+ left: 0;
+ top: 240px;
+ gap: 10px;
+  }
+  .social span{
+    font-size: 10px;
+  }
+  .button{
+    left: 22px;
+    margin-top: 335px;
+    padding: 0.55rem 0.6rem;
+  }
+
+
 
 }
 
@@ -1709,12 +2061,12 @@ form {
     height: 50vh;
     font-size: 16px;
     right: 4px;
-    top: 70px;
+    top: 78px;
     padding: 20px 25px;
   }
 
   .nav-items ul li {
-    margin: 16px 0; /* Adjust the margin between the menu items */
+    margin: 25px 0; /* Adjust the margin between the menu items */
   }
 
   .image-container {
@@ -1756,6 +2108,7 @@ form {
   .skill-card {
     width: 65%;
   }
+
   .icon-container > div{
     width: 50px;
     height: 50px;
@@ -1776,6 +2129,90 @@ form {
   .row-line, .row-line-a, .row-line-b, .row-line-c{
 display:none;
   }
+  .project-container{
+    width: 72%;
+  }
+
+  .projectSection p{
+    font-size: 2.8rem;
+  }
+  .project-items .maincard{
+  
+    width: 120px;
+  height: 232px;
+   
+}
+.project-items{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+    gap: 18px 5px;
+}
+
+
+.maincard p{
+    font-size: 18px;
+    text-align: center;
+}
+button.explore .button-text{
+    font-size: 16px;
+    font-weight: 500;
+    left: 12px;
+}
+button.explore{
+    width: 8rem;
+}
+button.explore .circle{
+    left: -5px;
+}
+
+
+footer{
+    height: 90vh;
+ }
+
+  .contact-card{
+    width: 90%;
+    height: 85%;
+  }
+  .contact-card p{
+    font-size: 3rem;
+  }
+  .form-control{
+    left: 16px;
+    width: 200px;
+  }
+  .form-control input{
+    width: 70%;
+  }
+  .social{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+ justify-content: center;
+ left: 0;
+ top: 240px;
+ gap: 10px;
+  }
+  .social img{
+    width: 20px;
+    height: 20px;
+  }
+  .social span{
+    font-size: 8px;
+  }
+  .button{
+    left: 22px;
+    margin-top: 335px;
+    padding: 0.45rem 0.5rem;
+  }
+  .skills-section .animationcontainer{
+    gap: 0px;
+  }
+  .box4,.box7 ,.box3{
+    display: none;
+  }
+
 
 }
 
