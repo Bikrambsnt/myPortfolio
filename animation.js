@@ -46,23 +46,6 @@ anime({
 
   },5000)
  
-  anime({
-    targets: '.row-line ,.row-line-b',
-    width:'40%',// -> from '28px' to '100%',
-    easing: 'easeInOutQuad',
-    direction: 'alternate',
-    loop: true,
-    duration:2000
-  });
-
-  anime({
-    targets: '.row-line-a,.row-line-c',
-     width:'40%',// -> from '28px' to '100%',
-    easing: 'easeInOutQuad',
-    direction: 'alternate',
-    loop: true,
-    duration:2500
-  });
 
 
   

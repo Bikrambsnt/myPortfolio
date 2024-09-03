@@ -59,7 +59,7 @@ z-index: 999;
   border-radius: 20px;
   padding: 20px;
   width: auto;
-  background-color: rgba(12, 27, 37, 0.938);
+  background-color: rgba(12, 27, 37, 0.845);
   height: 85vh;
   box-shadow: 0 6px 15px rgba(121, 197, 192, 1.5);
 }
@@ -599,7 +599,7 @@ header {
 }
 .js .jstext {
   position: absolute;
-  font-size: 18px;
+  font-size: 12px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   opacity: 0;
@@ -736,36 +736,7 @@ header {
   opacity: 1;
 }
 
-.connector-lines {
-  position: absolute;
-  height: 100vh;
-  top: 160px;
-}
-.row-line,
-.row-line-a,
-.row-line-b,
-.row-line-c {
-  padding: 1px;
-  /* width: 40%; */
-  background-color: #000000;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  top: 32%;
-  flex-direction: row;
-  position: absolute;
-  overflow: hidden;
-}
-.row-line-a {
-  top: 52%;
-}
 
-.row-line-b {
-  top: 70%;
-}
-.row-line-c {
-  top: 90%;
-}
 
 /* @keyframes drawLine {
     from {
@@ -1785,19 +1756,7 @@ button.explore{
     height: 70px;
   }
 
- .row-line{
-    top: 38%;
- }
- .row-line-a{
-    top: 56%;
- }
- .row-line-b{
-    top: 73.5%;
- }
- .row-line-c{
-    top:92%;
- }
-  
+
   .icon-container{
     left: 20px;
 }
@@ -1983,9 +1942,7 @@ align-items: center;
 .box4 ,.box47{
     display: none;
 }
-  .row-line, .row-line-a, .row-line-b, .row-line-c{
-    display: none;
-  }
+  
   .project-container{
     width: 72%;
   }
@@ -2155,9 +2112,7 @@ footer{
     right:8px ;
     bottom: 10%;
   }
-  .row-line, .row-line-a, .row-line-b, .row-line-c{
-display:none;
-  }
+
   .project-container{
     width: 72%;
   }

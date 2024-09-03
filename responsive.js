@@ -10,25 +10,5 @@ document.addEventListener('DOMContentLoaded',()=>{
     
  });
 
-svg.addEventListener('click' ,(e)=>{
-
-       if(e.target === svg){
-
-              console.log(`Clicked ${e.target}`);
-              
-              e.stopPropagation();
-              navMenu.classList.remove('show-menu');    
-              
-            
-       }
-});
-
-
-
-document.addEventListener('click' ,()=>{
-       navMenu.classList.remove('show-menu')
-})
-
-
 
 });
