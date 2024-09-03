@@ -24,21 +24,17 @@ body {
   box-sizing: border-box;
 }
 
-.to-top{
-display: flex;
-align-items: center;
-justify-content: center;
-position: fixed;
-margin-right: auto;
-right: 30px;
-bottom: 20px;
-z-index: 999;
-/* position: sticky; */
+.to-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  margin-right: auto;
+  right: 30px;
+  bottom: 20px;
+  z-index: 999;
+  /* position: sticky; */
 }
-
-
-
-
 
 .container {
   display: flex;
@@ -62,6 +58,21 @@ z-index: 999;
   background-color: rgba(12, 27, 37, 0.845);
   height: 85vh;
   box-shadow: 0 6px 15px rgba(121, 197, 192, 1.5);
+  animation: fadeIn 1.5s ease-in-out;
+  overflow: hidden;
+}
+
+
+@keyframes fadeIn{
+    from{
+       opacity: 0;
+        transform: translateY(30px);
+        
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 header {
   margin-top: 15px;
@@ -103,7 +114,9 @@ header {
   color: #ffffff;
   letter-spacing: 1px;
   padding-top: 4px;
+ 
 }
+
 .nav-items {
   flex-grow: 1;
   display: flex;
@@ -221,6 +234,19 @@ header {
   position: absolute;
   left: 100px;
   top: 220px;
+  transition: opacity 3s ease-in-out;
+  animation: nameFade 4s ease-in-out;
+}
+
+@keyframes nameFade{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .me,
@@ -269,8 +295,22 @@ header {
   background-position: center;
   border: 2px solid #15d7f4;
   filter: drop-shadow(0 0 10px red);
-  animation: glow 2s alternate infinite ease-in-out;
+  animation: glow 2s alternate infinite ease-in-out ,leftFade 5s ease-in-out;
+  transition: opacity 3s ease-in-out;
+
 }
+@keyframes leftFade{
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
 @keyframes glow {
   0% {
     filter: drop-shadow(0 0 10px rgb(255, 77, 0));
@@ -468,6 +508,38 @@ header {
   color: #191919;
 }
 
+.about-content,.maincard{
+  opacity: 0;
+  transition: opacity 1.5s , transform 2s ease-in-out;
+  transform: translateY(50px);
+}
+.morph{
+    opacity: 0;
+    transition: opacity 1.5s , transform 4s ease-in-out;
+    transform: translateY(200px);
+}
+.icon-container{
+    opacity: 0;
+    transition: opacity 1.5s , transform 3s ease-in-out;
+    transform: translateX(-50px);
+}
+.icon-container-b{
+    opacity: 0;
+    transition: opacity 1.5s , transform 3s ease-in-out;
+    transform: translateX(50px);
+}
+.contact-card{
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+.show-fade{
+    opacity: 1;
+    transform: translateY(0);
+    
+}
+
+/* @keyframes */
+
 .about-content strong {
   margin-top: 30px;
   display: block;
@@ -512,6 +584,7 @@ header {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   background-color: #d7d7d784;
+  /* overflow-y: hidden; */
 }
 
 .skill-card p {
@@ -736,8 +809,6 @@ header {
   opacity: 1;
 }
 
-
-
 /* @keyframes drawLine {
     from {
         stroke-dasharray: 0, 50;
@@ -799,7 +870,7 @@ line {
 }
 .maincard {
   width: 190px;
-  height: 254px; 
+  height: 254px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -971,8 +1042,6 @@ footer {
   overflow: hidden;
 }
 
-
-
 .contact-card p {
   text-align: center;
   margin: 2px;
@@ -1032,7 +1101,7 @@ footer {
   flex-direction: column; /* Arrange items vertically */
   align-items: flex-start; /* Align items to the left */
   position: relative;
- left: 280px;
+  left: 280px;
   cursor: pointer;
   top: -5px;
   gap: 70px; /* Adjust the spacing between the icons */
@@ -1055,18 +1124,17 @@ footer {
 
 /* Send Button */
 
-.send-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-
+.send-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.send-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.send-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {
@@ -1163,7 +1231,6 @@ footer {
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version */
- 
 }
 
 /* Remove active state */
@@ -1179,14 +1246,13 @@ footer {
     gap: 175px;
   }
 
-  .social{
+  .social {
     left: 230px;
   }
- .button{
-    left:17rem;
+  .button {
+    left: 17rem;
     margin-top: 450px;
- }
-
+  }
 }
 
 @media (max-width: 1000px) {
@@ -1194,7 +1260,7 @@ footer {
     font-size: 18px;
   }
 
-  .image-container{
+  .image-container {
     right: 28px;
   }
   .skills-section .animationcontainer {
@@ -1207,24 +1273,24 @@ footer {
   .icon-container-b {
     right: 150px;
   }
- .project-items .maincard{
+  .project-items .maincard {
     width: 180px;
- }
- button.explore{
-        width: 11rem;
-      }
+  }
+  button.explore {
+    width: 11rem;
+  }
 
-      .form-control input{
-        width: 80%;
-      }
+  .form-control input {
+    width: 80%;
+  }
 
-      .social{
-        left: 200px;
-      }
-      .button{
-        left:16rem;
-        margin-top: 450px;
-     }
+  .social {
+    left: 200px;
+  }
+  .button {
+    left: 16rem;
+    margin-top: 450px;
+  }
 }
 
 @media (max-width: 850px) {
@@ -1232,7 +1298,7 @@ footer {
     gap: 128px;
   }
 
-  .image-container{
+  .image-container {
     right: 12px;
     width: 180px;
     height: 180px;
@@ -1244,33 +1310,30 @@ footer {
   .icon-container-b {
     right: 100px;
   }
- .project-items .maincard {
+  .project-items .maincard {
     width: 170px;
     height: 240px;
-
   }
-  
-  .project-items{
+
+  .project-items {
     gap: 18px 16px;
   }
-  button.explore{
+  button.explore {
     width: 10rem;
   }
-  button.explore .circle{
+  button.explore .circle {
     left: -4px;
   }
 
-  .social{
+  .social {
     left: 180px;
   }
-  
 }
 @media (max-width: 800px) {
-    
-    .to-top{
-        right: 5px;
-        bottom: 35px;
-    }
+  .to-top {
+    right: 5px;
+    bottom: 35px;
+  }
   .contain {
     width: 95%;
   }
@@ -1305,10 +1368,9 @@ footer {
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     z-index: 999; /* Ensure the menu is above other elements */
   }
-  .nav-items ul li a{
+  .nav-items ul li a {
     color: #000000;
   }
-
 
   .nav-items ul.show-menu {
     display: flex;
@@ -1373,23 +1435,20 @@ footer {
   .skills-section .animationcontainer {
     gap: 114px;
   }
-  .project-items .maincard{
+  .project-items .maincard {
     width: 160px;
     height: 240px;
-
   }
-.project-items{
+  .project-items {
     gap: 18px 16px;
   }
-  button.explore{
+  button.explore {
     width: 10rem;
   }
 
-  button.explore .circle{
+  button.explore .circle {
     left: -4px;
   }
-
-
 }
 
 @media (max-width: 750px) and (min-width: 650px) {
@@ -1422,42 +1481,42 @@ footer {
   .skills-section .animationcontainer {
     gap: 90px;
   }
-  .icon-container{
+  .icon-container {
     left: 65px;
-}
-.icon-container-b{
+  }
+  .icon-container-b {
     right: 65px;
-}
-.project-items .maincard{
+  }
+  .project-items .maincard {
     width: 142px;
     height: 230px;
-}
-.maincard p{
+  }
+  .maincard p {
     font-size: 30px;
     text-align: center;
-}
-.project-items{
+  }
+  .project-items {
     gap: 18px 10px;
   }
 
-    .skills-section .project-container{
-        width: 82%;
-    }
-button.explore{
+  .skills-section .project-container {
+    width: 82%;
+  }
+  button.explore {
     width: 9rem;
   }
-  .form-control{
+  .form-control {
     left: 75px;
   }
-  .form-control input{
+  .form-control input {
     width: 70%;
   }
-  .social{
-    left:145px;
+  .social {
+    left: 145px;
   }
-  .button{
+  .button {
     left: 11rem;
-        margin-top: 450px;
+    margin-top: 450px;
   }
 }
 
@@ -1519,49 +1578,48 @@ button.explore{
     gap: 52px;
   }
 
-  .icon-container{
+  .icon-container {
     left: 40px;
-}
-.icon-container-b{
+  }
+  .icon-container-b {
     right: 40px;
-}
-.project-items .maincard{
-  
+  }
+  .project-items .maincard {
     width: 165px;
     height: 230px;
-}
-.maincard p{
+  }
+  .maincard p {
     font-size: 32px;
     text-align: center;
-}
+  }
 
-.project-items{
+  .project-items {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 18px 16px;
-}
-.skills-section .project-container{
+  }
+  .skills-section .project-container {
     width: 80%;
-}
-button.explore{
+  }
+  button.explore {
     width: 9rem;
   }
-  .contact-card{
+  .contact-card {
     width: 80%;
   }
-  .form-control{
+  .form-control {
     left: 55px;
     width: 235px;
   }
-  .form-control input{
+  .form-control input {
     width: 70%;
   }
-  .social{
-    left:120px;
+  .social {
+    left: 120px;
   }
-  .button{
+  .button {
     left: 7rem;
-        margin-top: 450px;
+    margin-top: 450px;
   }
 }
 
@@ -1620,67 +1678,66 @@ button.explore{
   .skills-section .animationcontainer {
     gap: 28px;
   }
-  .icon-container{
+  .icon-container {
     left: 20px;
-}
-.icon-container-b{
+  }
+  .icon-container-b {
     right: 20px;
-}
-.project-items .maincard{
-  
+  }
+  .project-items .maincard {
     width: 130px;
     height: 190px;
-}
-.maincard p{
+  }
+  .maincard p {
     font-size: 24px;
     text-align: center;
-}
+  }
 
-.project-items{
+  .project-items {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 18px 10px;
-}
+  }
 
-button.explore{
+  button.explore {
     width: 8rem;
   }
-  button.explore .button-text{
+  button.explore .button-text {
     font-size: 14px;
     left: 16px;
     line-height: 2;
   }
 
-  .project-items button{
+  .project-items button {
     top: 60px;
   }
- footer{
+  footer {
     height: 90vh;
- }
+  }
 
-  .contact-card{
+  .contact-card {
     width: 80%;
     height: 85%;
   }
-  .form-control{
+  .form-control {
     left: 55px;
     /* width: 235px; */
   }
-  .form-control input{
+  .form-control input {
     width: 70%;
   }
-  .social{
- display: grid;
- grid-template-columns: repeat(2,1fr);
- justify-items: center;
- left: 0px;
- top: 240px;
- gap: 10px;
+  .social {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    left: 0px;
+    top: 240px;
+    gap: 10px;
   }
-  .social span{
+  .social span {
     font-size: 12px;
   }
-  .button{
+  .button {
     left: 90px;
     margin-top: 330px;
   }
@@ -1751,43 +1808,37 @@ button.explore{
     height: 70px;
   }
 
-  .icon-container  > div{
+  .icon-container > div {
     width: 70px;
     height: 70px;
   }
 
-
-  .icon-container{
+  .icon-container {
     left: 20px;
-}
-.icon-container-b{
+  }
+  .icon-container-b {
     right: 20px;
-}
-.project-items .maincard{
-  
+  }
+  .project-items .maincard {
     width: 190px;
-  height: 254px;
-   
-}
-.project-items{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
+    height: 254px;
+  }
+  .project-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 
-}
-
-
-.maincard p{
+  .maincard p {
     font-size: 32px;
     text-align: center;
-}
+  }
 
-
-/* .skills-section .project-container{
+  /* .skills-section .project-container{
     width: 80%;
 } */
-/* button.explore{
+  /* button.explore{
     width: 8rem;
   }
   button.explore .button-text{
@@ -1798,33 +1849,33 @@ align-items: center;
   /* .project-items button{
     top: 60px;
   } */
-  footer{
+  footer {
     height: 90vh;
- }
+  }
 
-  .contact-card{
+  .contact-card {
     width: 80%;
     height: 85%;
   }
-  .form-control{
+  .form-control {
     left: 32px;
     width: 235px;
   }
-  .form-control input{
+  .form-control input {
     width: 70%;
   }
-  .social{
- display: grid;
- grid-template-columns: repeat(2,1fr);
- justify-content: center;
- left: 0;
- top: 240px;
- gap: 10px;
+  .social {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    left: 0;
+    top: 240px;
+    gap: 10px;
   }
-  .social span{
+  .social span {
     font-size: 12px;
   }
-  .button{
+  .button {
     left: 60px;
     margin-top: 335px;
   }
@@ -1922,92 +1973,86 @@ align-items: center;
     gap: 1px;
   }
 
-  .icon-container > div{
+  .icon-container > div {
     width: 60px;
     height: 60px;
   }
 
-  .icon-container-b > div{
+  .icon-container-b > div {
     width: 60px;
     height: 60px;
   }
-  .icon-container{
+  .icon-container {
     left: 15px;
     bottom: 5%;
   }
-  .icon-container-b{
-    right:15px ;
+  .icon-container-b {
+    right: 15px;
     bottom: 5%;
   }
-.box4 ,.box47{
+  .box4,
+  .box47 {
     display: none;
-}
-  
-  .project-container{
+  }
+
+  .project-container {
     width: 72%;
   }
 
-  .projectSection p{
+  .projectSection p {
     font-size: 2.8rem;
   }
-  .project-items .maincard{
-  
+  .project-items .maincard {
     width: 150px;
-  height: 232px;
-   
-}
-.project-items{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
+    height: 232px;
+  }
+  .project-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 18px 5px;
-}
+  }
 
-
-.maincard p{
+  .maincard p {
     font-size: 30px;
     text-align: center;
-}
+  }
 
-
-footer{
+  footer {
     height: 90vh;
- }
+  }
 
-  .contact-card{
+  .contact-card {
     width: 90%;
     height: 85%;
   }
-  .contact-card p{
+  .contact-card p {
     font-size: 3rem;
   }
-  .form-control{
+  .form-control {
     left: 16px;
     width: 200px;
   }
-  .form-control input{
+  .form-control input {
     width: 70%;
   }
-  .social{
- display: grid;
- grid-template-columns: repeat(2,1fr);
- justify-content: center;
- left: 0;
- top: 240px;
- gap: 10px;
+  .social {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    left: 0;
+    top: 240px;
+    gap: 10px;
   }
-  .social span{
+  .social span {
     font-size: 10px;
   }
-  .button{
+  .button {
     left: 22px;
     margin-top: 335px;
     padding: 0.55rem 0.6rem;
   }
-
-
-
 }
 
 @media (max-width: 199px) and (min-width: 100px) {
@@ -2095,109 +2140,105 @@ footer{
     width: 65%;
   }
 
-  .icon-container > div{
+  .icon-container > div {
     width: 50px;
     height: 50px;
   }
 
-  .icon-container-b > div{
+  .icon-container-b > div {
     width: 50px;
     height: 50px;
   }
-  .icon-container{
+  .icon-container {
     left: 8px;
     bottom: 10%;
   }
-  .icon-container-b{
-    right:8px ;
+  .icon-container-b {
+    right: 8px;
     bottom: 10%;
   }
 
-  .project-container{
+  .project-container {
     width: 72%;
   }
 
-  .projectSection p{
+  .projectSection p {
     font-size: 2.8rem;
   }
-  .project-items .maincard{
-  
+  .project-items .maincard {
     width: 120px;
-  height: 232px;
-   
-}
-.project-items{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
+    height: 232px;
+  }
+  .project-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 18px 5px;
-}
+  }
 
-
-.maincard p{
+  .maincard p {
     font-size: 18px;
     text-align: center;
-}
-button.explore .button-text{
+  }
+  button.explore .button-text {
     font-size: 16px;
     font-weight: 500;
     left: 12px;
-}
-button.explore{
+  }
+  button.explore {
     width: 8rem;
-}
-button.explore .circle{
+  }
+  button.explore .circle {
     left: -5px;
-}
+  }
 
-
-footer{
+  footer {
     height: 90vh;
- }
+  }
 
-  .contact-card{
+  .contact-card {
     width: 90%;
     height: 85%;
   }
-  .contact-card p{
+  .contact-card p {
     font-size: 3rem;
   }
-  .form-control{
+  .form-control {
     left: 16px;
     width: 200px;
   }
-  .form-control input{
+  .form-control input {
     width: 70%;
   }
-  .social{
- display: grid;
- grid-template-columns: repeat(2,1fr);
- justify-content: center;
- left: 0;
- top: 240px;
- gap: 10px;
+  .social {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    left: 0;
+    top: 240px;
+    gap: 10px;
   }
-  .social img{
+  .social img {
     width: 20px;
     height: 20px;
   }
-  .social span{
+  .social span {
     font-size: 8px;
   }
-  .button{
+  .button {
     left: 22px;
     margin-top: 335px;
     padding: 0.45rem 0.5rem;
   }
-  .skills-section .animationcontainer{
+  .skills-section .animationcontainer {
     gap: 0px;
   }
-  .box4,.box7 ,.box3{
+  .box4,
+  .box7,
+  .box3 {
     display: none;
   }
-
-
 }
 
 /* End Responsive */

@@ -1,3 +1,5 @@
+
+
 anime({
     targets: '.morphing-demo .polymorph',
     points: [
@@ -46,6 +48,32 @@ anime({
 
   },5000)
  
+
+// Animation Viewpoint for Fade in anmation on pages
+
+
+document.addEventListener("DOMContentLoaded" , ()=>{
+
+  const section = document.querySelectorAll('.about-content ,.morph,.icon-container,.icon-container-b,.maincard,.contact-card');
+
+  const observer = new IntersectionObserver((e) =>{
+    e.forEach(entry =>{
+      // console.log('Enteries:' ,entry);
+      if(entry.isIntersecting){
+        entry.target.classList.add('show-fade');
+        // observer.unobserve(entry.target);
+      }
+    });
+
+
+  },{threshold:0.3})  
+
+section.forEach (contentSection =>{
+observer.observe(contentSection);
+});
+
+
+});
 
 
   
