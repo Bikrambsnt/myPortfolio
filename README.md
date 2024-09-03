@@ -43,7 +43,7 @@ I plan to continually update this portfolio with more features and content, incl
 
  ## Getting Started
 
-##### To view the portfolio [click_here](www.myportfolio.com)
+##### To view the portfolio [click_here](https://mineportfoliosite.netlify.app/)
 
 ## Contact 
 
