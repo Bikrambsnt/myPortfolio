@@ -337,12 +337,12 @@
     <div class="contact-card">
      
       <p>Contact</p>
-      <form method="get" id="form">
+      <form action="https://formsubmit.co/Bikrambasnett7@gmail.com" method="post">
 <!-- Input field -->
 
 <!-- Username Field -->
         <div class="form-control">
-          <input type="text" id="username" required="">
+          <input type="text" id="username" name="name" required="">
           <label for="username">
               <span style="transition-delay:0ms">U</span><span style="transition-delay:50ms">s</span><span style="transition-delay:100ms">e</span><span style="transition-delay:150ms">r</span><span style="transition-delay:200ms">n</span><span style="transition-delay:250ms">a</span><span style="transition-delay:300ms">m</span><span style="transition-delay:350ms">e</span>
           </label>
@@ -350,7 +350,7 @@
 
         <!-- Email Field -->
         <div class="form-control">
-          <input type="email" id="email" required="">
+          <input type="email" id="email" name="email" required="">
           <label for="email">
               <span style="transition-delay:0ms">E</span><span style="transition-delay:50ms">m</span><span style="transition-delay:100ms">a</span><span style="transition-delay:150ms">i</span><span style="transition-delay:200ms">l</span>
           </label>
@@ -358,7 +358,7 @@
 
         <!-- Subject Field -->
         <div class="form-control">
-          <input type="text" id="subject" required="">
+          <input type="text" id="subject" name="subject" required="">
           <label for="subject">
               <span style="transition-delay:0ms">S</span><span style="transition-delay:50ms">u</span><span style="transition-delay:100ms">b</span><span style="transition-delay:150ms">j</span><span style="transition-delay:200ms">e</span><span style="transition-delay:250ms">c</span><span style="transition-delay:300ms">t</span>
           </label>
@@ -366,7 +366,7 @@
 
         <!-- Message Field -->
         <div class="form-control">
-          <input type="message" id="message" required="">
+          <input type="message" id="message" name="message" required="">
           <label for="message">
               <span style="transition-delay:0ms">M</span><span style="transition-delay:50ms">e</span><span style="transition-delay:100ms">s</span><span style="transition-delay:150ms">s</span><span style="transition-delay:200ms">a</span><span style="transition-delay:250ms">g</span><span style="transition-delay:300ms">e</span>
           </label>
@@ -403,7 +403,8 @@
   </div>
  </div>
 <div class="send-btn">
-<a style="--clr: #7808d0" class="button" id="send-btn">
+
+<button style="--clr: #7808d0" class="button" type="submit">
             <span class="button__icon-wrapper">
                 <svg width="10" class="button__icon-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 15">
                     <path fill="currentColor" d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"></path>
@@ -414,7 +415,8 @@
                 </svg>
             </span>
             Send Email
-        </a>
+</button>
+        
       </div>
   
 
